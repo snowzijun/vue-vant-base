@@ -1,7 +1,7 @@
 /*
- * @Author: 冯超
+ * @Author: 子君
  * @Date: 2020-06-15 13:57:40
- * @LastEditors: 冯超
+ * @LastEditors: 子君
  * @LastEditTime: 2020-06-23 17:43:37
  * @Description: postcss 配置 样式适配
  * @FilePath: \glink-eai-portal-mobile\postcss.config.js

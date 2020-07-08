@@ -1,7 +1,7 @@
 /*
- * @Author: 冯超
+ * @Author: 子君
  * @Date: 2020-06-15 10:34:38
- * @LastEditors: 冯超
+ * @LastEditors: 子君
  * @LastEditTime: 2020-06-15 14:06:18
  * @Description: 文件说明
  * @FilePath: \glink-eai-portal-mobile\babel.config.js
