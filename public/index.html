@@ -1,0 +1,34 @@
+<!--
+ * @Author: 冯超
+ * @Date: 2020-06-15 10:34:38
+ * @LastEditors: 冯超
+ * @LastEditTime: 2020-07-08 16:14:45
+ * @Description: 文件说明
+ * @FilePath: \vue-base\public\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <%if(process.env.NODE_ENV === 'production' && htmlWebpackPlugin.options.cdns){%>
+      <%htmlWebpackPlugin.options.cdns.JS.forEach(cdn => {%>
+        <script src="<%=cdn%>"></script>
+      <%}) %>
+      <%htmlWebpackPlugin.options.cdns.CSS.forEach(cdn => {%>
+        <link href="<%=cdn%>" rel="stylesheet"></link>
+      <%}) %>
+    <%}%>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
