@@ -51,5 +51,19 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.17.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.{js,vue}": ["vue-cli-service lint","npm run stylelint"]
+    },
+    "ignore": [
+       "**/dist/*.js"
+    ]
   }
 }
