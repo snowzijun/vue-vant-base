@@ -4,13 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "serve:wx": "vue-cli-service serve --model=wx",
-    "serve:dd": "vue-cli-service serve --model=dd",
-    "serve:appCan": "vue-cli-service serve --model=appCan",
     "build": "vue-cli-service build",
-    "build:wx": "vue-cli-service build --model=wx",
-    "build:dd": "vue-cli-service build --model=dd",
-    "build:appCan": "vue-cli-service build --model=appCan",
     "stylelint": "stylelint src/**/*.{html,vue,css,sass,scss} --fix",
     "lint": "vue-cli-service lint"
   },
