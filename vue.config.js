@@ -3,9 +3,9 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 // 开发模式代理地址 TODO: 按需修改
-const DEV_URL = 'http://192.168.115.152:9767'
+const DEV_URL = ''
 // mock模式代理地址 TODO: 按需修改
-const MOCK_URL = 'http://192.168.113.29:10000/mock/5d56b5e0c5c7c1783436bcd2'
+const MOCK_URL = ''
 
 module.exports = {
   configureWebpack: config => {
