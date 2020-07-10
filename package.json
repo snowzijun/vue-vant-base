@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "stylelint": "stylelint src/**/*.{html,vue,css,sass,scss} --fix",
     "eslint": "vue-cli-service lint",
-    "lint":"yarn eslint && yarn stylelint"
+    "lint": "yarn eslint && yarn stylelint"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -58,13 +58,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git add . && lint-staged",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "vue-cli-service lint"
+      "vue-cli-service lint",
+      "git add -A"
     ],
     "*.{html,vue,css,sass,scss}": [
       "yarn stylelint"
