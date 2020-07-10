@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "stylelint": "stylelint src/**/*.{html,vue,css,sass,scss} --fix",
-    "lint": "vue-cli-service lint"
+    "eslint": "vue-cli-service lint",
+    "lint":"yarn eslint && yarn stylelint"
   },
   "dependencies": {
     "axios": "^0.19.2",
