@@ -65,7 +65,7 @@
   "lint-staged": {
     "*.{js,vue}": [
       "vue-cli-service lint",
-      "git add ."
+      "git add -A"
     ],
     "*.{html,vue,css,sass,scss}": [
       "yarn stylelint"
