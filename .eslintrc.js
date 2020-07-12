@@ -2,11 +2,7 @@ module.exports = {
   root: true,
 
   globals: {
-    process: true,
-    // 微信
-    wx: true,
-    // 钉钉
-    dd: true
+    process: true
   },
 
   parserOptions: {
