@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "babel-plugin-transform-remove-console": "^6.9.4",
     "core-js": "^3.6.5",
     "dayjs": "^1.8.28",
     "vant": "^2.8.6",
@@ -36,6 +35,7 @@
     "babel-plugin-jsx-v-model": "^2.0.3",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^6.7.2",
@@ -59,7 +59,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
