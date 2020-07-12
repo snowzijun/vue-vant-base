@@ -1,11 +1,20 @@
+/*
+ * @Author: 子君
+ * @Date: 2020-07-12 12:26:05
+ * @LastEditTime: 2020-07-12 23:12:18
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue-vant-base/vue.config.js
+ */
+
 const webpackConfig = require('./config/webpack.config.js')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 // 开发模式代理地址 TODO: 按需修改
-const DEV_URL = ''
+const DEV_URL = 'http://127.0.0.1'
 // mock模式代理地址 TODO: 按需修改
-const MOCK_URL = ''
+const MOCK_URL = 'http://127.0.0.1'
 
 module.exports = {
   configureWebpack: config => {
