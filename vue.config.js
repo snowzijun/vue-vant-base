@@ -1,10 +1,10 @@
 /*
  * @Author: 子君
  * @Date: 2020-07-12 12:26:05
- * @LastEditTime: 2020-07-12 23:12:18
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-07-13 14:07:09
+ * @LastEditors: 冯超
  * @Description: In User Settings Edit
- * @FilePath: /vue-vant-base/vue.config.js
+ * @FilePath: \vue-base\vue.config.js
  */
 
 const webpackConfig = require('./config/webpack.config.js')
@@ -39,11 +39,11 @@ module.exports = {
   },
   // 不需要生产环境的 source map
   productionSourceMap: false,
-  publicPath: process.env.NODE_ENV === 'development' ? '/' : '',
+  publicPath: !isProd ? '/' : '',
   css: {
-    // 是否将css 提取到独立的文件
+    // 是否将css 提取到独立的文件,生产环境提取，开发环境不提取
     extract: !!isProd,
-    // 生产模式开启css sourcemap
+    // 开发模式开启css sourcemap
     sourceMap: !isProd,
     loaderOptions: {
       less: {
