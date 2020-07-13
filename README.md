@@ -65,6 +65,18 @@ yarn build
 yarn lint
 ```
 
+### 常见问题
+1. 启动项目`eslint`报 `Delete CR prettier/prettier`
+这个是window 和 mac 换行符不同导致的，为了保持一致，当前系统统一制定换行符为lf,可以在导出项目之前配置
+
+```shell
+// 提交时转换为LF，检出时不转换
+git config --global core.autocrlf input
+```
+
+或者也可以打开.editorconfig 文件，注释掉  `end_of_line = lf`, 注释方式为在代码前面加 #
+
+
 
 我是子君，如果喜欢，请给一个star 谢谢，也可以关注公众号【前端有的玩】一起玩前端
 
