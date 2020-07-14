@@ -14,6 +14,9 @@
 ### 路由缓存
 在开发移动端项目的时候，我们经常会有这样的需求，比如一个列表页跳转到详情页，这时候我们希望列表页可以`keep-alive`,但是如果详情页返回到列表页，详情页不需要`keep-alive`，本框架已集成了路由缓存，不需要再做任何配置。
 
+### 内置装饰器
+有些场景使用装饰器比在代码里面硬编码显得更简单，比如防抖节流，确认提示等等，当前框架内置了一小部分装饰器，更多装饰器正在完善中
+
 ### gzip打包压缩代码
  通过配置压缩工具，可以在`build`的时候，自动将静态资源压缩为`gz`文件，当部署的服务器启用`gzip`功能后，将会自动加载压缩的文件，提高加载速度
 
@@ -86,6 +89,11 @@ git config --global core.autocrlf input
 
 或者也可以打开.editorconfig 文件，注释掉  `end_of_line = lf`, 注释方式为在代码前面加 #
 
+#### 2. 使用装饰器可能会提示 `Property assignment expected.Vetur(1136)`
+因为本项目使用`eslint`进行代码格式检查，所以可以关闭`vetur`验证`script`的能力，请在`vscode settings`里面添加下面代码
+```shell
+"vetur.validation.script": false,
+```
 
 
 
