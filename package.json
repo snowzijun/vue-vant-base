@@ -1,7 +1,8 @@
 {
-  "name": "glink-eai-portal-mobile",
+  "name": "vue-vant-base",
   "version": "0.1.0",
   "private": true,
+  "description": "这个项目是将一些基础配置比如eslint,移动端适配等进行了封装，开发人员只需fork就可直接开箱即用，不用再做额外的配置",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
