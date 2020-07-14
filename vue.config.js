@@ -1,8 +1,8 @@
 /*
  * @Author: 子君
  * @Date: 2020-07-12 12:26:05
- * @LastEditTime: 2020-07-13 14:07:09
- * @LastEditors: 冯超
+ * @LastEditTime: 2020-07-14 11:22:03
+ * @LastEditors: 子君
  * @Description: In User Settings Edit
  * @FilePath: \vue-base\vue.config.js
  */
