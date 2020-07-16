@@ -1,7 +1,21 @@
 {
-  "name": "glink-eai-portal-mobile",
+  "name": "vue-vant-base",
   "version": "0.1.0",
   "private": true,
+  "description": "这个项目是将一些基础配置比如eslint,移动端适配等进行了封装，开发人员只需fork就可直接开箱即用，不用再做额外的配置",
+  "author": {
+    "name": "子君",
+    "email": "1451965647@qq.com"
+  },
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/snowzijun/vue-vant-base"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10.16"
+  },
+  "keywords": ["Vue","Vant","开箱即用","前端框架"],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -35,6 +49,7 @@
     "babel-plugin-jsx-v-model": "^2.0.3",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^6.7.2",

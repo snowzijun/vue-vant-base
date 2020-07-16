@@ -2,16 +2,16 @@ module.exports = {
   root: true,
 
   globals: {
-    process: true,
-    // 微信
-    wx: true,
-    // 钉钉
-    dd: true
+    process: true
   },
 
   parserOptions: {
     parser: 'babel-eslint',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures:{
+      // 支持装饰器
+      legacyDecorators: true
+    }
   },
 
   env: {

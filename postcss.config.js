@@ -1,8 +1,8 @@
 /*
  * @Author: 子君
  * @Date: 2020-06-15 13:57:40
- * @LastEditors: 子君
- * @LastEditTime: 2020-06-23 17:43:37
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-07-12 23:10:19
  * @Description: postcss 配置 样式适配
  * @FilePath: \glink-eai-portal-mobile\postcss.config.js
  */
@@ -10,10 +10,6 @@
 module.exports = {
   plugins: {
     autoprefixer: {},
-    // 'postcss-pxtorem': {
-    //   rootValue: 37.5,
-    //   propList: ['*']
-    // }
     'postcss-px-to-viewport': {
       // 视窗的宽度，对应的是我们设计稿的宽度，一般是750
       viewportWidth: 375,
