@@ -5,7 +5,7 @@
 
 我是子君，如果觉得这个框架有用，麻烦给我一个star,谢谢，也可以扫描下方二维码关注公众号【前端有的玩】一起玩前端。
 
-![](./src/assets/qrcode.png)
+![](https://github.com/snowzijun/vue-vant-base/raw/master/src/assets/qrcode.png)
 
 
 # 功能点
