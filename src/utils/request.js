@@ -1,6 +1,9 @@
 import axios from 'axios'
-import mockMatch from '@/mock'
-// import store from '@/store'
+let mockMatch = undefined
+// 正式环境不需要使用mock
+if (process.env.NODE_ENV === 'development') {
+  mockMatch = require('@/mock').default
+}
 
 // TODO: 请求基础路径，根据项目进行配置,并添加代理
 const baseURL = '/api'
