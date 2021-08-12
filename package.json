@@ -3,22 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "description": "这个项目是将一些基础配置比如eslint,移动端适配等进行了封装，开发人员只需fork就可直接开箱即用，不用再做额外的配置",
-  "author": {
-    "name": "子君",
-    "email": "1451965647@qq.com"
-  },
   "repository": {
-    "type":"git",
-    "url":"https://github.com/snowzijun/vue-vant-base"
+    "type": "git",
+    "url": "https://github.com/snowzijun/vue-vant-base"
   },
   "license": "MIT",
   "engines": {
     "node": ">= 10.16"
   },
-  "keywords": ["Vue","Vant","开箱即用","前端框架"],
+  "keywords": [
+    "Vue",
+    "Vant",
+    "开箱即用",
+    "前端框架"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:prod": "vue-cli-service build --mode prod",
+    "build:staging": "vue-cli-service build --mode staging",
+    "build:test": "vue-cli-service build --mode test",
     "stylelint": "stylelint src/**/*.{html,vue,css,sass,scss} --fix",
     "eslint": "vue-cli-service lint",
     "lint": "yarn eslint && yarn stylelint"
@@ -69,7 +73,8 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.17.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^4.4.2"
   },
   "husky": {
     "hooks": {

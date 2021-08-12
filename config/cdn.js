@@ -15,7 +15,14 @@ module.exports = {
       url: 'https://cdn.bootcss.com/vue-router/3.2.0/vue-router.min.js',
       exportName: 'VueRouter'
     },
-    axios: 'https://cdn.bootcss.com/axios/0.19.2/axios.min.js'
+    axios: {
+      url: 'https://cdn.bootcss.com/axios/0.19.2/axios.min.js',
+      exportName: 'axios'
+    },
+    lodash: {
+      url: 'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js',
+      exportName: '_'
+    }
   },
   CSS: {}
 }
