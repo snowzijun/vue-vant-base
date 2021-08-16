@@ -1,8 +1,4 @@
 /*
- * @Author: 子君
- * @Date: 2020-07-14 13:37:25
- * @LastEditors: 子君
- * @LastEditTime: 2020-07-14 13:45:24
  * @Description: 函数防抖
  * @FilePath: \vue-base\src\decorator\debounce.js
  */

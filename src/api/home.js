@@ -1,8 +1,4 @@
 /*
- * @Author: 子君
- * @Date: 2020-07-08 16:12:32
- * @LastEditors: 子君
- * @LastEditTime: 2020-07-17 12:51:08
  * @Description: 发送请求
  * @FilePath: \vue-base\src\api\home.js
  */

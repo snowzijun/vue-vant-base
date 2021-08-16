@@ -1,8 +1,4 @@
 <!--
- * @Author: 子君
- * @Date: 2020-07-08 16:12:32
- * @LastEditors: 子君
- * @LastEditTime: 2020-07-17 09:44:16
  * @Description: 文件说明
  * @FilePath: \vue-base\src\views\home\index.vue
 -->
@@ -57,12 +53,12 @@ export default {
     @confirm('这是通过装饰器添加的确认信息', '提示')
     $_handleUseDecorator() {
       console.log(`
-        你还可以使用
-        @alert 提示框
-        @throttle 函数节流
-        @debounce 函数防抖
-        更多装饰器正在完善中
-      `)
+                你还可以使用
+                @alert 提示框
+                @throttle 函数节流
+                @debounce 函数防抖
+                更多装饰器正在完善中
+              `)
     },
     // 加载数据
     async $_loadData() {

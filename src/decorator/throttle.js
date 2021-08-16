@@ -1,8 +1,4 @@
 /*
- * @Author: 子君
- * @Date: 2020-07-14 13:42:14
- * @LastEditors: 子君
- * @LastEditTime: 2020-07-14 18:04:40
  * @Description: 函数节流
  * @FilePath: \vue-base\src\decorator\throttle.js
  */
