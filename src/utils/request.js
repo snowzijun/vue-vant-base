@@ -5,11 +5,10 @@ if (process.env.NODE_ENV === 'development') {
   mockMatch = require('@/mock').default
 }
 
-// TODO: 请求基础路径，根据项目进行配置,并添加代理
-const baseURL = '/api'
+const baseURL = process.env.BASE_URL
 
 // mock请求代理
-const mockURL = '/mock'
+const mockURL = process.env.VUE_APP_MOCK_URL
 
 const instance = axios.create({
   baseURL,

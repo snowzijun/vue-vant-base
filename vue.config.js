@@ -10,10 +10,6 @@ const isProd = process.env.NODE_ENV === 'production'
 // 开发模式代理地址 TODO: 按需修改
 const DEV_URL = 'http://127.0.0.1'
 
-// mock模式代理地址,为了方便演示，这里使用了fastmock线上服务，建议使用yapi,可以搭建私服， TODO: 按需修改
-const MOCK_URL =
-  'https://www.fastmock.site/mock/52683c53c56c5c59bc1e46d24a3550b6/zijun'
-
 module.exports = {
   configureWebpack: config => {
     if (isProd) {
@@ -30,7 +26,7 @@ module.exports = {
   chainWebpack: config => {
     // 项目标题
     config.plugin('html').tap(args => {
-      args[0].title = '前端有的玩'
+      args[0].title = process.env.VUE_APP_TITLE
       return args
     })
     webpackConfig(config)
@@ -65,7 +61,8 @@ module.exports = {
       },
       '^/mock/': {
         // TODO: 添加 mock地址
-        target: MOCK_URL,
+        // mock模式代理地址,为了方便演示，这里使用了fastmock线上服务，建议使用yapi,可以搭建私服， TODO: 按需修改
+        target: process.env.VUE_APP_MOCK_URL,
         changeOrigin: false,
         pathRewrite: {
           '^/mock': ''

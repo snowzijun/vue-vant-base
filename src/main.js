@@ -39,6 +39,6 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-const a = process.env.BASE_API
+const a = process.env.BASE_URL
 const b = process.env.VUE_APP_TITLE
 document.body.appendChild(a, b)
