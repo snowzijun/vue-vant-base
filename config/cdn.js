@@ -4,23 +4,23 @@ module.exports = {
   enable: true,
   JS: {
     vue: {
-      url: 'https://cdn.bootcss.com/vue/2.6.11/vue.min.js',
+      url: 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js',
       exportName: 'Vue'
     },
     vuex: {
-      url: 'https://cdn.bootcdn.net/ajax/libs/vuex/3.2.0/vuex.js',
+      url: 'https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js',
       exportName: 'Vuex'
     },
     'vue-router': {
-      url: 'https://cdn.bootcss.com/vue-router/3.2.0/vue-router.min.js',
+      url: 'https://cdn.jsdelivr.net/npm/vue-router@3.5.2/dist/vue-router.min.js',
       exportName: 'VueRouter'
     },
     axios: {
-      url: 'https://cdn.bootcss.com/axios/0.19.2/axios.min.js',
+      url: 'https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js',
       exportName: 'axios'
     },
     lodash: {
-      url: 'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js',
+      url: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js',
       exportName: '_'
     }
   },

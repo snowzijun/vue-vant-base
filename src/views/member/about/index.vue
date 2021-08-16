@@ -1,5 +1,8 @@
 <template>
-  <div>这里是about页面</div>
+  <div>
+    <p>这里是about页面</p>
+    <img src="../../../assets/logo.png" alt="" />
+  </div>
 </template>
 
 <script>
