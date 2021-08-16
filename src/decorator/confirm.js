@@ -7,9 +7,9 @@ import { Dialog } from 'vant'
  * @param {*} cancelFn 取消回调函数
  */
 export function confirm(message, title = '提示', cancelFn = () => {}) {
-  return function(target, name, descriptor) {
+  return function (target, name, descriptor) {
     const originFn = descriptor.value
-    descriptor.value = async function(...rest) {
+    descriptor.value = async function (...rest) {
       try {
         await Dialog.confirm({
           message,
@@ -29,9 +29,9 @@ export function confirm(message, title = '提示', cancelFn = () => {}) {
  * @param {*} title 提示标题
  */
 export function alert(message, title = '提示') {
-  return function(target, name, descriptor) {
+  return function (target, name, descriptor) {
     const originFn = descriptor.value
-    descriptor.value = async function(...rest) {
+    descriptor.value = async function (...rest) {
       await Dialog.confirm({
         message,
         title: title

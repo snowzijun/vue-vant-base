@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'development') {
   mockMatch = require('@/mock').default
 }
 
-const baseURL = process.env.BASE_URL
+const baseURL = process.env.VUE_BASE_API
 
 // mock请求代理
 const mockURL = process.env.VUE_APP_MOCK_URL

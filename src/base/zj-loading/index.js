@@ -10,7 +10,7 @@ let loadingInstance = undefined
 
 const LoadingContructor = Vue.extend(Loading)
 
-LoadingContructor.prototype.close = function() {
+LoadingContructor.prototype.close = function () {
   setTimeout(() => {
     loadingInstance.loading = false
   })

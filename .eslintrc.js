@@ -8,7 +8,7 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
     sourceType: 'module',
-    ecmaFeatures:{
+    ecmaFeatures: {
       // 支持装饰器
       legacyDecorators: true
     }
@@ -89,15 +89,18 @@ module.exports = {
     'no-console': 'off',
     // 正则中可以出现控制字符
     'no-control-regex': 'off',
-    'no-unused-vars': ['error', {
-      ignoreRestSiblings: true,
-      // 可以声明未使用的h，方便jsx
-      argsIgnorePattern: 'h'
-    }],
+    'no-unused-vars': [
+      'error',
+      {
+        ignoreRestSiblings: true,
+        // 可以声明未使用的h，方便jsx
+        argsIgnorePattern: 'h'
+      }
+    ],
     // 行注释必须在行上面
-    "line-comment-position":['error',{"position": "above" }],
+    'line-comment-position': ['error', { position: 'above' }],
     // 一个函数最多能指定4个参数
-    "max-params":['error',{max:4}],
+    'max-params': ['error', { max: 4 }],
     // 构造函数必须首字母大写
     // "new-cap":['error', {"newIsCap": true} ],
     // vue 属性顺序
@@ -142,21 +145,23 @@ module.exports = {
       }
     ],
     // 组件在template内必须使用 kebab-case 格式
-    "vue/component-name-in-template-casing": ["error", "kebab-case", {
-      "registeredComponentsOnly": false,
-      "ignores": []
-    }],
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      {
+        registeredComponentsOnly: false,
+        ignores: []
+      }
+    ],
     // template 内必须使用 ===
-    "vue/eqeqeq": 'error',
+    'vue/eqeqeq': 'error',
     // scss deep 写法必须时 ::v-deep , 需要在这一处将 :v-deep 添加为例外
     // "selector-pseudo-element-no-unknown":["error","v-deep"],
     // 允许使用v-html
-    "vue/no-v-html":0,
+    'vue/no-v-html': 0,
     // 禁用隐式的eval() 比如 setTimeout('alert();', 100)
-    "no-implied-eval": 'error'
+    'no-implied-eval': 'error'
   },
-
-
 
   // 单元测试相关
   overrides: [

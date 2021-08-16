@@ -12,8 +12,8 @@ import { throttle } from 'lodash'
  * [options.leading=true] (boolean): 指定调用在节流开始前。
  * [options.trailing=true] (boolean): 指定调用在节流结束后。
  */
-export default function(wait, options = {}) {
-  return function(target, name, descriptor) {
+export default function (wait, options = {}) {
+  return function (target, name, descriptor) {
     descriptor.value = throttle(descriptor.value, wait, options)
   }
 }
