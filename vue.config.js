@@ -12,6 +12,7 @@ const DEV_URL = 'http://127.0.0.1'
 
 const MOCK_URL =
   'https://www.fastmock.site/mock/52683c53c56c5c59bc1e46d24a3550b6/zijun'
+
 module.exports = {
   configureWebpack: config => {
     if (isProd) {
