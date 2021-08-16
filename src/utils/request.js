@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'qs'
 let mockMatch = undefined
 // 正式环境不需要使用mock
 if (process.env.NODE_ENV === 'development') {
@@ -123,6 +124,16 @@ const post = (url, data = {}) => {
     data
   })
 }
+const postForm = (url, data = {}) => {
+  return request({
+    url,
+    method: 'post',
+    data: qs.stringify(data),
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    }
+  })
+}
 
 const del = (url, data = {}) => {
   return request({
@@ -132,7 +143,7 @@ const del = (url, data = {}) => {
   })
 }
 // 将获取cancelToken的方法绑定到每个方法上面，方便调用的时候使用
-;[request, get, post, put, del, instance].forEach(item => {
+;[request, get, post, postForm, put, del, instance].forEach(item => {
   item.getCancelToken = () => {
     return axios.CancelToken
   }
@@ -144,4 +155,4 @@ const del = (url, data = {}) => {
  * set
  * axios 对axios进行包装之后的原生实例
  */
-export { request, get, post, put, del, instance as axios, baseURL }
+export { request, get, post, postForm, put, del, instance as axios, baseURL }

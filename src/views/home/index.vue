@@ -18,6 +18,7 @@
       <van-cell title="使用日期工具类" :value="`今天是${currentDate}`" />
       <van-cell title="你看，右下角有一个vConsole,用来调试的" />
       <van-cell title="你再看，地址栏有一个?VNK=xxx,这是路由缓存" />
+      <van-cell title="点击跳转about页面" @click="goJump" />
     </van-list>
   </div>
 </template>
@@ -74,6 +75,9 @@ export default {
       } finally {
         loading.close()
       }
+    },
+    goJump() {
+      this.$router.push({ name: 'TestAbout' })
     }
   }
 }
