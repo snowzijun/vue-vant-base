@@ -22,7 +22,17 @@ module.exports = {
     lodash: {
       url: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js',
       exportName: '_'
+    },
+    dayjs: {
+      url: 'https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js',
+      exportName: 'dayjs'
+    },
+    vant: {
+      url: 'https://cdn.jsdelivr.net/npm/vant@2.12.26/lib/vant.min.js',
+      exportName: 'vant'
     }
   },
-  CSS: {}
+  CSS: {
+    vant: 'https://cdn.jsdelivr.net/npm/vant@2.12.26/lib/index.css'
+  }
 }
