@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @FilePath: \vue-base\vue.config.js
  */
-
+const path = require('path')
 const webpackConfig = require('./config/webpack.config.js')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
@@ -44,12 +44,17 @@ module.exports = {
     sourceMap: !isProd,
     loaderOptions: {
       less: {
-        lessOptions: {
-          modifyVars: {
-            hack: 'true;@import "~@/style/_variables.less"'
-          }
-        }
+        lessOptions: {}
       }
+    }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+        path.resolve(__dirname, './src/style/mixin/*.less'),
+        path.resolve(__dirname, './src/style/variables/*.less')
+      ]
     }
   },
   devServer: {
