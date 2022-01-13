@@ -1,8 +1,4 @@
 <!--
- * @Author: 冯超
- * @Date: 2020-07-08 16:12:32
- * @LastEditors: 冯超
- * @LastEditTime: 2020-07-10 13:02:25
  * @Description: 文件说明
  * @FilePath: \vue-base\src\App.vue
 -->
@@ -34,18 +30,20 @@ export default {
 </script>
 
 <style lang="less">
+.font('Alibaba-PuHuiTi-Medium');
 #app {
   height: 100vh;
-  font-family: PingFangSC-Regular;
+  font-family: Alibaba-PuHuiTi-Medium, serif;
   background-color: #f1f3f5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: @red;
 }
 
 /** 解决路由切换动画上下闪动问题 */
 .router {
   position: absolute;
-  top: safe-area-inset-top;
+  top: constant(safe-area-inset-top);
   top: env(safe-area-inset-top);
   width: 100%;
   transition: all 0.377s ease;

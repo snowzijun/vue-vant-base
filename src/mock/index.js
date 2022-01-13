@@ -1,8 +1,4 @@
 /*
- * @Author: 子君
- * @Date: 2020-07-08 16:12:32
- * @LastEditors: 子君
- * @LastEditTime: 2020-07-17 12:58:37
  * @Description: mock接口主入口文件
  * @FilePath: \vue-base\src\mock\index.js
  */

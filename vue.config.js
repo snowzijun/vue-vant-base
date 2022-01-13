@@ -1,12 +1,8 @@
 /*
- * @Author: 子君
- * @Date: 2020-07-12 12:26:05
- * @LastEditTime: 2020-07-17 12:59:55
- * @LastEditors: 子君
  * @Description: In User Settings Edit
  * @FilePath: \vue-base\vue.config.js
  */
-
+const path = require('path')
 const webpackConfig = require('./config/webpack.config.js')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
@@ -14,7 +10,6 @@ const isProd = process.env.NODE_ENV === 'production'
 // 开发模式代理地址 TODO: 按需修改
 const DEV_URL = 'http://127.0.0.1'
 
-// mock模式代理地址,为了方便演示，这里使用了fastmock线上服务，建议使用yapi,可以搭建私服， TODO: 按需修改
 const MOCK_URL =
   'https://www.fastmock.site/mock/52683c53c56c5c59bc1e46d24a3550b6/zijun'
 
@@ -34,7 +29,7 @@ module.exports = {
   chainWebpack: config => {
     // 项目标题
     config.plugin('html').tap(args => {
-      args[0].title = '前端有的玩'
+      args[0].title = process.env.VUE_APP_TITLE
       return args
     })
     webpackConfig(config)
@@ -49,12 +44,17 @@ module.exports = {
     sourceMap: !isProd,
     loaderOptions: {
       less: {
-        lessOptions: {
-          modifyVars: {
-            hack: 'true;@import "~@/style/_variables.less"'
-          }
-        }
+        lessOptions: {}
       }
+    }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+        path.resolve(__dirname, './src/style/mixin/*.less'),
+        path.resolve(__dirname, './src/style/variables/*.less')
+      ]
     }
   },
   devServer: {
@@ -69,6 +69,7 @@ module.exports = {
       },
       '^/mock/': {
         // TODO: 添加 mock地址
+        // mock模式代理地址,为了方便演示，这里使用了fastmock线上服务，建议使用yapi,可以搭建私服， TODO: 按需修改
         target: MOCK_URL,
         changeOrigin: false,
         pathRewrite: {

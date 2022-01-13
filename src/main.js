@@ -1,3 +1,5 @@
+import * as global from './common/global'
+
 import Vue from 'vue'
 
 // 用于控制浏览器前进后退 使用keep-alive
@@ -38,3 +40,8 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+// 注册全局变量
+Object.keys(global).forEach(key => {
+  window[key] = global[key]
+})
